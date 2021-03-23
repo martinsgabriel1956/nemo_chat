@@ -5,7 +5,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "nemo": "node index.js --username nemo --room nemoroom --hostUri http://localhost:9898",
+    "bigode": "node index.js --username bigode --room nemoroom --hostUri http://localhost:9898",
+    "canela": "node index.js --username canela --room nemoroom --hostUri http://localhost:9898"
   },
   "dependencies": {
     "blessed": "^0.1.81"
