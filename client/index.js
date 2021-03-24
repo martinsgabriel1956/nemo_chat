@@ -1,6 +1,7 @@
 // Importa a class events do Node.js
 import Events from "events";
 import CliConfig from "./src/cliConfig.js";
+import EventManager from "./src/eventManager.js";
 import SocketClient from "./src/socket.js";
 import TerminalController from "./src/terminalController.js";
 
@@ -12,9 +13,19 @@ const config = CliConfig.parseArguments(commands);
 const componentEmitter = new Events();
 const socketClient = new SocketClient(config);
 await socketClient.initialize();
+const eventManager = new EventManager({ componentEmitter, socketClient });
+const events = eventManager.getEvents();
+socketClient.attachEvents(events);
 
-// //Cria o Terminal Controller
-// const controller = new TerminalController();
+const data = {
+  roomId: config.room,
+  userName: config.username
+};
 
-// // Inicia o projeto projeto
-// await controller.initializeTable(componentEmitter);
+eventManager.joinRoomAndWaitForMessages(data);
+
+//Cria o Terminal Controller
+const controller = new TerminalController();
+
+// Inicia o projeto projeto
+await controller.initializeTable(componentEmitter);
