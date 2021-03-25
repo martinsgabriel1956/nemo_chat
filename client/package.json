@@ -5,9 +5,12 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "nemo": "node index.js --username nemo --room nemoroom --hostUri http://localhost:9898",
-    "bigode": "node index.js --username bigode --room nemoroom --hostUri http://localhost:9898",
-    "canela": "node index.js --username canela --room nemoroom --hostUri http://localhost:9898"
+    "host": "node index.js --username nemo --room nemoroom --hostUri http://localhost:9898",
+    "user1": "node index.js --username bigode --room gruderoom --hostUri http://localhost:9898",
+    "user2": "node index.js --username canela --room nemoroom --hostUri http://localhost:9898",
+    "user3": "node index.js --username lobito --room gothamroom --hostUri http://localhost:9898",
+    "user4": "node index.js --username luana --room gothamroom --hostUri http://localhost:9898",
+    "user5": "node index.js --username maria --room gruderoom --hostUri http://localhost:9898"
   },
   "dependencies": {
     "blessed": "^0.1.81"

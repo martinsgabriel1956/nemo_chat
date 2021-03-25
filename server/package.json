@@ -7,6 +7,9 @@
     "start": "node src/",
     "dev": "nodemon src/"
   },
+  "engines": {
+    "node": "15"
+  },
   "license": "MIT",
   "dependencies": {
     "uuid": "^8.3.2"
