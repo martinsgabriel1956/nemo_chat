@@ -1,16 +1,19 @@
 {
-  "name": "client",
+  "name": "@martinsgabriel1956/nemo-chat",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "bin": {
+    "nemo-chat": "index.js"
+  },
   "scripts": {
-    "host": "node index.js --username nemo --room nemoroom --hostUri http://localhost:9898",
-    "user1": "node index.js --username bigode --room gruderoom --hostUri http://localhost:9898",
-    "user2": "node index.js --username canela --room nemoroom --hostUri http://localhost:9898",
-    "user3": "node index.js --username lobito --room gothamroom --hostUri http://localhost:9898",
-    "user4": "node index.js --username luana --room gothamroom --hostUri http://localhost:9898",
-    "user5": "node index.js --username maria --room gruderoom --hostUri http://localhost:9898"
+    "host": "node index.js --username nemo --room nemoroom",
+    "user1": "node index.js --username bigode --room gruderoom",
+    "user2": "node index.js --username canela --room nemoroom",
+    "user3": "node index.js --username lobito --room gothamroom",
+    "user4": "node index.js --username luana --room gothamroom",
+    "user5": "node index.js --username maria --room gruderoom "
   },
   "dependencies": {
     "blessed": "^0.1.81"

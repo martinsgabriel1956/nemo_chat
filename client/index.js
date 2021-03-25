@@ -1,3 +1,11 @@
+#!/usr/bin/env node
+
+/*
+  ./index.js \
+    --username nemo \
+    --room nemoroom
+*/
+
 // Importa a class events do Node.js
 import Events from "events";
 import CliConfig from "./src/cliConfig.js";
